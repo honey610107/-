@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /* ------------------- */
+/* TEMPLATE        -- */
+/* ----------------- */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300);
+body {
+    height: 100%;
+    background-color: #333;
+    color: whitesmoke;
+    font-size: 16px;
+    font-family: 'Lato';
+}
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 26px;
+}
+h3 {
+    font-size: 18px;
+}
+p {
+    margin: 15px 0;
+    line-height: 24px;
+    color: gainsboro;
+}
+a {
+    color: dodgerblue;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+}
+a:hover {
+    color: tomato;
+}
+.container {
+    max-width: 960px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* ------------------- */
+/* PEN STYLES      -- */
+/* ----------------- */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    -webkit-filter: url(#goo);
+    filter: url(#goo);
+}
+.grid div {
+    padding: 50px;
+    margin: -10px;
+    background-color: tomato;
+    border-radius: 10px;
+}
+._1 {
+    grid-column: 1 / span 3;
+}
+._2 {
+    grid-column: 3 / span 2;
+}
+._3 {
+    grid-column: 2 / span 2;
+}
+    </style>
+</head>
+<body>
+    <script src="https://wow.techbrood.com/libs/jquery/jquery-1.11.1.min.js"></script>
+<div class="container">
+    <div class="grid">
+        <div class="_1">Fate. It protects fools, little children, and ships named "Enterprise." Earl Grey tea, watercress sandwiches... and Bularian canapés? Are you up for promotion? Computer, belay that order. Fate protects fools, little children and ships named Enterprise.
+            Fear is the true enemy, the only enemy. Mr. Crusher, ready a collision course with the Borg ship. Yesterday I did not know how to eat gagh. Shields up! Rrrrred alert! I can't. As much as I care about you, my first duty is to the ship. In all
+            trust, there is the possibility for betrayal. You did exactly what you had to do. You considered all your options, you tried every alternative and then you made the hard choice. Mr. Worf, you do remember how to fire phasers? The unexpected
+            is our normal routine. When has justice ever been as simple as a rule book? Smooth as an android's bottom, eh, Data? What? We're not at all alike!</div>
+        <div class="_2">Is it my imagination, or have tempers become a little frayed on the ship lately? Smooth as an android's bottom, eh, Data? We could cause a diplomatic crisis. Take the ship into the Neutral Zone Talk about going nowhere fast.</div>
+        <div class="_3">Computer, lights up! Could someone survive inside a transporter buffer for 75 years? Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation.</div>
+
+    </div>
+</div>
+
+<svg xmlns="https://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+    </defs>
+</svg>
+</body>
+</html>
